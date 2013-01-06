@@ -1,61 +1,64 @@
-The ChildBrowser allows you to display external webpages within your [PhoneGap](http://phonegap.com/) application.
+CDVPlugin
+===
 
-- For back support reference:<br> 
-[https://github.com/phonegap/phonegap-plugins/tree/master/iPhone/ChildBrowser 
-](https://github.com/phonegap/phonegap-plugins/tree/master/iPhone/ChildBrowser)
-
-
-A simple use case would be:
-
-- Users can follow links/buttons to view web content without leaving your app. 
-- Display web pages/images/videos/pdfs in the ChildBrowser.
-
-This command creates a popup browser that is shown in front of your app, when the user presses the DONE button they are simply returned to your app ( actually they never left ).
-
-The ChildBrowser has buttons for refreshing, navigating back + forwards, as well as the option to open in Safari.
-
-Icons are located in the [ChildBrowser.bundle](https://github.com/phonegap/phonegap-plugins/tree/master/iOS/ChildBrowser/ChildBrowser.bundle) and can be customized. Added Retina -72@2x.png image support to fix small icons in the webview toolbar when displayed on Retina devices.
-
-- Added Temporary Scope (self executing) per [Cordova Plugin Upgrade Guide](https://github.com/phonegap/phonegap-plugins/blob/master/iOS/README.md).
+Cordova (iOS) Xcode Plugin Template
+---
 
 
 
+###Installation:
+    $ cd ~/Library/Developer/Xcode/Templates/File\ Templates
+    $ git clone https://github.com/RandyMcMillan/CDVPlugin.git
 
-- add Key **ChildBrowserCommand** and Value **ChildBrowserCommand** to the Cordova.plist in your application xcode project.
+![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot.png)
 
-![image](https://github.com/phonegap/phonegap-plugins/raw/master/iOS/ChildBrowser/Cordova.plist.png)
+###Usage:
+####Open your Cordova (iOS) Xcode Project
 
-Here is a sample command to open Google in a ChildBrowser :
+* Press <COMMAND+n>    
 
-cordova.exec("ChildBrowserCommand.showWebPage", "http://www.google.com" );
+    ![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot2.png)  
 
+* RENAME your Plugin! (_Do not use CDVPlugin_)  
 
-###Sample use:
+    ![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot3.png)  
 
+* Copy the MyCDVPlugin.js file to your /www folder
+
+    ![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot4.png)
     
-	function onDeviceReady() {
+[Sample index.html is included in the generated plugin](https://raw.github.com/RandyMcMillan/CDVPlugin/master/CDVPlugin.xctemplate/index.html)
 
-		    var root = this;
-		    cb = window.plugins.childBrowser;
 
-		    if(cb != null) {
-			cb.onLocationChange = function(loc){ root.locChanged(loc); };
-			cb.onClose = function(){root.onCloseBrowser(); };
-			cb.onOpenExternal = function(){root.onOpenExternal(); };
-			cb.showWebPage("http://google.com");
+<br><br>
 
-		    }
-		}
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+ 
+ 
+ or 
+ 
+ 
+The MIT License
 
-		function onCloseBrowser() {
-		    console.log("onCloseBrowser!");
-		}
+Copyright (c) 2012 Randy McMillan
 
-		function locChanged(loc) {
-		    console.log("locChanged!");
-		}
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-		function onOpenExternal() {
-		    alert("onOpenExternal!");
-		}
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
