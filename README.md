@@ -8,14 +8,14 @@ Cordova (iOS) Xcode Plugin Template
 
 ###Installation:
     $ cd ~/Library/Developer/Xcode/Templates/File\ Templates
-    $ git clone https://github.com/RandyMcMillan/CDVPlugin.git
+    $ git clone https://github.com/RandyMcMillan/CDVBrowser.git
 
-![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot.png)
+![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ScreenShot.png)
 
 ###Usage:
 ####Open your Cordova (iOS) Xcode Project
 
-* Press <COMMAND+n>    
+* Press `<COMMAND+n>`    
 
     ![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot2.png)  
 
