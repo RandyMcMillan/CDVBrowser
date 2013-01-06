@@ -21,7 +21,7 @@ Cordova (iOS) Xcode Plugin Template
 
 * RENAME your Plugin! (_Do not use CDVPlugin_)  
 
-    ![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot3.png)  
+    ![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ScreenShot3.png)  
 
 * Copy the MyCDVPlugin.js file to your /www folder
 
