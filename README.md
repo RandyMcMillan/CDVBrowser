@@ -1,4 +1,4 @@
-CDVPlugin
+CDVBrowser
 ===
 
 Cordova (iOS) Xcode Plugin Template
