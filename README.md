@@ -17,7 +17,7 @@ Cordova (iOS) Xcode Plugin Template
 
 * Press `<COMMAND+n>`    
 
-    ![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot2.png)  
+    ![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ScreenShot2.png)  
 
 * RENAME your Plugin! (_Do not use CDVPlugin_)  
 
