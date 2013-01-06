@@ -19,13 +19,12 @@ Cordova (iOS) Xcode Plugin Template
 
     ![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ScreenShot2.png)  
 
-* RENAME your Plugin! (_Do not use CDVPlugin_)  
 
     ![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ScreenShot3.png)  
 
-* Copy the MyCDVPlugin.js file to your /www folder
+* Copy the CDVBrowser.js file to your /www folder
 
-    ![image](https://raw.github.com/RandyMcMillan/CDVPlugin/master/ScreenShot4.png)
+    ![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ScreenShot4.png)
     
 [Sample index.html is included in the generated plugin](https://raw.github.com/RandyMcMillan/CDVPlugin/master/CDVPlugin.xctemplate/index.html)
 
