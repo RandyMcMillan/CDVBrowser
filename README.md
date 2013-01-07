@@ -12,6 +12,10 @@ Cordova (iOS) Xcode Plugin Template
 
 ![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ScreenShot.png)
 
+or 
+
+[https://github.com/RandyMcMillan/cdv-ios-plugin-templates](https://github.com/RandyMcMillan/cdv-ios-plugin-templates)    
+    
 ###Usage:
 ####Open your Cordova (iOS) Xcode Project
 
