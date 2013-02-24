@@ -155,6 +155,10 @@
 	} else {
 		self.imageURL	= @"";
 		self.isImage	= NO;
+
+		//       NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"jquery-lightbox/index" ofType:@"html" inDirectory:@"www"]];
+		//      [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+
 		NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
 		[self.webView loadRequest:request];
 	}
