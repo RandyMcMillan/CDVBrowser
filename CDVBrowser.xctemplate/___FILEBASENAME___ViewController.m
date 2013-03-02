@@ -156,8 +156,6 @@
             self.imageURL	= @"";
             self.isImage	= NO;
 
-            //       NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"jquery-lightbox/index" ofType:@"html" inDirectory:@"www"]];
-            //      [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
             NSLog(@"url sent from html = %@ ", url);
             NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
             [self.webView loadRequest:request];
@@ -165,9 +163,9 @@
         
     } else {
     
-        NSLog(@"url sent from html = %@ ", url);
-        NSURLRequest *request = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:url ofType:@"html" inDirectory:@"www"]];
-        NSLog(@"request sent from html = %@ ", request);
+        NSLog(@"Local url sent from html = %@ ", url);
+        NSURLRequest *request = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:url ofType:nil inDirectory:@"www"]];
+        NSLog(@"Local request sent from html = %@ ", request);
         [self.webView loadRequest:[NSURLRequest requestWithURL:request]];
         
     }
