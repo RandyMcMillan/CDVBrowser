@@ -139,31 +139,41 @@
 - (void)loadURL:(NSString *)url
 {
 	NSLog(@"Opening Url : %@", url);
+    if ([url hasPrefix:@"http://"]) {
+        if ([url hasSuffix:@".png"] ||
+            [url hasSuffix:@".jpg"] ||
+            [url hasSuffix:@".jpeg"] ||
+            [url hasSuffix:@".bmp"] ||
+            [url hasSuffix:@".gif"]) {
+            self.imageURL	= nil;
+            self.imageURL	= url;
+            self.isImage	= YES;
+            NSString *htmlText = @"<html><body style='background-color:#333;margin:0px;padding:0px;'><img style='min-height:200px;margin:0px;padding:0px;width:100%;height:auto;' alt='' src='IMGSRC'/></body></html>";
+            htmlText = [htmlText stringByReplacingOccurrencesOfString:@"IMGSRC" withString:url];
 
-	if ([url hasSuffix:@".png"] ||
-		[url hasSuffix:@".jpg"] ||
-		[url hasSuffix:@".jpeg"] ||
-		[url hasSuffix:@".bmp"] ||
-		[url hasSuffix:@".gif"]) {
-		self.imageURL	= nil;
-		self.imageURL	= url;
-		self.isImage	= YES;
-		NSString *htmlText = @"<html><body style='background-color:#333;margin:0px;padding:0px;'><img style='min-height:200px;margin:0px;padding:0px;width:100%;height:auto;' alt='' src='IMGSRC'/></body></html>";
-		htmlText = [htmlText stringByReplacingOccurrencesOfString:@"IMGSRC" withString:url];
+            [self.webView loadHTMLString:htmlText baseURL:[NSURL URLWithString:@""]];
+        } else {
+            self.imageURL	= @"";
+            self.isImage	= NO;
 
-		[self.webView loadHTMLString:htmlText baseURL:[NSURL URLWithString:@""]];
-	} else {
-		self.imageURL	= @"";
-		self.isImage	= NO;
-
-		//       NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"jquery-lightbox/index" ofType:@"html" inDirectory:@"www"]];
-		//      [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
-
-		NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
-		[self.webView loadRequest:request];
-	}
+            //       NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"jquery-lightbox/index" ofType:@"html" inDirectory:@"www"]];
+            //      [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+            NSLog(@"url sent from html = %@ ", url);
+            NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+            [self.webView loadRequest:request];
+        }
+        
+    } else {
+    
+        NSLog(@"url sent from html = %@ ", url);
+        NSURLRequest *request = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:url ofType:@"html" inDirectory:@"www"]];
+        NSLog(@"request sent from html = %@ ", request);
+        [self.webView loadRequest:[NSURLRequest requestWithURL:request]];
+        
+    }
 
 	self.webView.hidden = NO;
+
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)sender
