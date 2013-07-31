@@ -10,8 +10,11 @@
 
 @synthesize ___FILEBASENAME___;
 
-- (void)showWebPage:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options	// args: url
+- (void)showWebPage:(CDVInvokedUrlCommand*)command;
 {
+    
+    NSLog(@"command.arguments 0 = %@",[command.arguments objectAtIndex:0]);
+
 	/* setting audio session category to "Playback" (since iOS 6) */
 	AVAudioSession	*audioSession		= [AVAudioSession sharedInstance];
 	NSError			*setCategoryError	= nil;
@@ -38,19 +41,19 @@
 
 	[self.viewController presentModalViewController:___FILEBASENAME___ animated:YES];
 
-	NSString *url = (NSString *)[arguments objectAtIndex:0];
+	NSString *url = (NSString *)[command.arguments objectAtIndex:0];
 
 	[self.___FILEBASENAME___ loadURL:url];
 }
 
-- (void)getPage:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options
+- (void)getPage:(CDVInvokedUrlCommand*)command;
 {
-	NSString *url = (NSString *)[arguments objectAtIndex:0];
+	NSString *url = (NSString *)[command.arguments objectAtIndex:0];
 
 	[self.___FILEBASENAME___ loadURL:url];
 }
 
-- (void)close:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options	// args: url
+- (void)close:(CDVInvokedUrlCommand*)command;
 {
 	[self.___FILEBASENAME___ closeBrowser];
 }

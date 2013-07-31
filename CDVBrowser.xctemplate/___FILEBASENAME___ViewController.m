@@ -139,7 +139,7 @@
 - (void)loadURL:(NSString *)url
 {
 	NSLog(@"Opening Url : %@", url);
-    if ([url hasPrefix:@"http://"]) {
+    if ([url hasPrefix:@"http://"] || [url hasPrefix:@"https://"]) {
         if ([url hasSuffix:@".png"] ||
             [url hasSuffix:@".jpg"] ||
             [url hasSuffix:@".jpeg"] ||

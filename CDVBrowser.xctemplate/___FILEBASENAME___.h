@@ -15,7 +15,27 @@
 
 @property (nonatomic, strong) ___FILEBASENAME___ViewController *___FILEBASENAME___;
 
-- (void)showWebPage:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
+
+
+/*
+ *
+ *   - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
+ *   {
+ *   // Check command.arguments here.
+ *   [self.commandDelegate runInBackground:^{
+ *   NSString* payload = nil;
+ *   // Some blocking logic...
+ *   CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
+ *   // The sendPluginResult method is thread-safe.
+ *   [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+ *   }];
+ *   }
+ *
+ */
+
+
+
+- (void)showWebPage:(CDVInvokedUrlCommand*)command;
 - (void)onChildLocationChange:(NSString *)newLoc;
 
 @end
