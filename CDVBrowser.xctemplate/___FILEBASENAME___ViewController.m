@@ -163,11 +163,9 @@
         
     } else {
     
-        NSLog(@"Local url sent from html = %@ ", url);
-        NSURLRequest *request = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:url ofType:nil inDirectory:@"www"]];
-        NSLog(@"Local request sent from html = %@ ", request);
-        [self.webView loadRequest:[NSURLRequest requestWithURL:request]];
-        
+        NSLog(@"url sent from html = %@ ", url);
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://github.com/RandyMcMillan/CDVBrowser/blob/master/CDVBrowser.xctemplate/index.html"]];
+        [self.webView loadRequest:request];
     }
 
 	self.webView.hidden = NO;
