@@ -4,9 +4,9 @@ CDVBrowser
 Cordova (iOS) Xcode Plugin Template
 ---
 
-Updated 07/31/2013 for Cordova iOS 3.0.0
+Updated 09/20/2013 for Cordova iOS 3.1.0
 
-For the template installer [cdv-ios-plugin-templates](https://github.com/RandyMcMillan/cdv-ios-plugin-templates)
+###Template Installer [cdv-ios-plugin-templates](https://github.com/RandyMcMillan/cdv-ios-plugin-templates)
 
     git clone https://github.com/RandyMcMillan/cdv-ios-plugin-templates.git
 
@@ -30,22 +30,6 @@ For the template installer [cdv-ios-plugin-templates](https://github.com/RandyMc
 
     ![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ScreenShot4.png)
     
-[Sample index.html is included in the generated plugin](https://raw.github.com/RandyMcMillan/CDVBrowser/master/CDVBrowser.xctemplate/index.html)
-
-####Add to www/index.html
-
-`<script type="text/javascript" charset="utf-8" src="CDVBrowser.js"></script>`
-
-
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/CDVBrowser.xctemplate/ScreenShot1.png)
-
-#### *Option 
-
-Link or Copy into the Xcode project
-
-
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/CDVBrowser.xctemplate/ScreenShot2.png)
-<br>
 
 [Sample index.html is included in the generated plugin](https://raw.github.com/RandyMcMillan/CDVBrowser/master/CDVBrowser.xctemplate/index.html)
 
@@ -59,21 +43,6 @@ A sample index.html is included in the plugin repository
 
 ####Cordova (iOS) 3.0+
 
-#####add to your config.xml 
-
-    <feature name="CDVBrowser">
-        <param name="ios-package" value="CDVBrowser"/>
-    </feature>
-
-
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/AddFilesToProject.png)
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/AddProjectsToProject2.png)
-###Add files to the project
-
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/CopyJSToWWW.png)
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/CopyJSToWWW2.png)
-###Copy CDVPDFReader.js to your project's WWW folder
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/EditConfigXML.png)
 ###Edit the config.xml file
 
     <feature name="CDVBrowser">
@@ -81,30 +50,8 @@ A sample index.html is included in the plugin repository
     </feature>
 
 
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/IndexHTML.png)
 Sample [index.html](https://raw.github.com/RandyMcMillan/CDVBrowser/master/index.html)
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/MessageUI.png)
 <br><br>
-Add MessageUI.framework to your project.
-
-
-
-This new version offers a new UI based on original source code here: [https://github.com/vfr/Reader](https://github.com/vfr/Reader)
-<br>Reference for additional usage
-
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/viewportrait.png)
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/viewportrait2.png)
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ipadlandscapeview.png)
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ipadlandscapeview2.png)
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ipadlandscapeview3.png)
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ipadlandscapeview4.png)
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ipadlandscapeview5.png)
-
-
-
-
-
-
 
 <br><br>
 
